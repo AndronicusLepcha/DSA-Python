@@ -1,4 +1,4 @@
-"""Algorith
+"""Algorithm
 for i=0 to n:
 cur=dl[i]
 if sv[cur]==0 then
