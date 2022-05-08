@@ -1,3 +1,14 @@
+"""Algorith
+for i=0 to n:
+cur=dl[i]
+if sv[cur]==0 then
+    sv[cur]=index[i]
+else:
+    for j = cur to 0:
+        if sv[j]==0:
+            sv[j]=index[i]
+"""
+
 index=[1,2,3,4,5,6]
 p=[200,180,190,300,120,100]
 dl=[5,3,3,2,4,2]
