@@ -1,3 +1,13 @@
+"""ALgorith
+for i=1 to n
+    if weight+w[i]<=W
+      then clo[i]=1 or 0
+     else 
+       col[i]=(W-weight)/w[i]
+       weight=W[i]*col[i]+weight
+       break
+"""
+
 index=[1,2,3,4]
 p=[50,70,20,45]
 w=[40,20,10,15]
