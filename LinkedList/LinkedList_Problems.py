@@ -1,9 +1,6 @@
     # Remove Duplicates from Unsorted List:
     # Given an unsorted linked list, remove duplicates without using additional data structures.
 
-    # Detect a Cycle:
-    # Determine if a linked list has a cycle and find the starting point of the cycle if it exists.
-
     # Intersection of Two Linked Lists:
     # Find the node where two linked lists intersect. If they don't intersect, return null.
 
@@ -21,9 +18,6 @@
 
     # Clone a Linked List with Random Pointers:
     # Implement a deep copy of a linked list with a random pointer.
-
-    # Rotate Linked List:
-    # Given a linked list, rotate it to the right by k places, where k is non-negative.
 
     # Merge K Sorted Lists:
     # Merge k sorted linked lists and return it as one sorted list.
@@ -64,6 +58,7 @@ class LinkedList:
     def __init__(self):
         self.head=None
         self.list=[]
+        self.temp1=None
 
     def create_node(self,data):  #first node in the linked list
         node = Node(data,None)
@@ -134,6 +129,7 @@ class LinkedList:
             nodes += str(itr.data)+"-->"
             itr=itr.next
         print(nodes)
+
     # Remove Duplicates from Sorted List:
     # Given a sorted linked list, delete all duplicates such that each element appears only once.
     def removeDuplicates(self):
@@ -147,6 +143,43 @@ class LinkedList:
                 print("Duplicate element found at index ",idx)
                 self.deleteNodeAtAnyIndex()
             itr = itr.next
+
+# Detect a Cycle:
+#make cycle
+#    def MakeCycle(self):
+#         itr=self.head
+#         while itr.next is not None:
+#             temp=itr
+#             itr=itr.next
+#     #Make the last node point to the head to create a cycle   
+#         itr.next=self.head
+# Determine if a linked list has a cycle and find the starting point of the cycle if it exists.
+    def detectCycle(self):
+        tortoise = self.head
+        hare = self.head
+        while tortoise is not None and hare.next is not None:
+            tortoise=tortoise.next
+            hare=hare.next.next
+            if tortoise ==  hare:
+                print("Cycle Detected")
+                return
+        print("No Cycle detected")
+           
+ # Rotate Linked List:
+ # Given a linked list, rotate it to the right by k places, where k is non-negative.
+    def rotateLL(self):
+        itr=self.head
+        while itr.next is not None:
+            temp=itr
+            itr=itr.next
+    #Make the last node point to the head to create a cycle   
+        itr.next=self.head
+     #update the head pointer to the new head (temp of next)
+        self.head=temp.next
+    # break the cycle
+        temp.next = None   
+                    
+
 
 
 node=LinkedList()
@@ -163,4 +196,7 @@ node.addNodeAtAnyIndex(99, 4)
 node.addNodeAtAnyIndex(800, 5)
 node.deleteNodeAtAnyIndex()
 node.removeDuplicates()
+node.printLinkedList()
+node.rotateLL()
+node.detectCycle()
 node.printLinkedList()
