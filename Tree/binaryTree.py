@@ -22,7 +22,7 @@ class BinarySearchTree:
 
     def inorderTraversal(self):
         elements=[]
-        #visit left tree
+        #visit left tree3
         if self.left:
             elements += self.left.inorderTraversal()
         
