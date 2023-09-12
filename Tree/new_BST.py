@@ -21,6 +21,7 @@ class BST:
 
     def inorderTraversal(self):
         elements=[]
+
         if self.left:
             elements += self.left.inorderTraversal()
 
@@ -30,6 +31,26 @@ class BST:
             elements += self.right.inorderTraversal()
         
         return elements
+    
+    def search(self,key):
+        if key==self.data:
+            print("Key is found")
+            return
+        
+        if key<self.data:
+            
+            if self.left:
+                print("I am going left")
+                self.left.search(key)
+            else:
+                print("Key not found")
+
+        if key>self.data:
+            if self.right:
+                print("I am going right")
+                self.right.search(key)
+            else:
+                print("Key not Found")
 
         
 
@@ -41,3 +62,4 @@ if __name__ == '__main__':
     for i in range(1,len(l)):
        root.addChild(l[i])
     print(root.inorderTraversal())
+    root.search(90)
