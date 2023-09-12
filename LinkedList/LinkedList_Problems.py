@@ -1,6 +1,3 @@
-    # Remove Duplicates from Unsorted List:
-    # Given an unsorted linked list, remove duplicates without using additional data structures.
-
     # Intersection of Two Linked Lists:
     # Find the node where two linked lists intersect. If they don't intersect, return null.
 
@@ -9,18 +6,6 @@
 
     # Palindrome Linked List:
     # Check if a linked list is a palindrome.
-
-    # Reverse Linked List in Groups:
-    # Reverse nodes in k-group, where k is a positive integer. For example, if k = 3, reverse every three nodes.
-
-    # Flatten a Multilevel Doubly Linked List:
-    # Flatten a multilevel doubly linked list. Each node has a next pointer and a child pointer, where the child pointer can point to its next node or a child doubly linked list.
-
-    # Clone a Linked List with Random Pointers:
-    # Implement a deep copy of a linked list with a random pointer.
-
-    # Merge K Sorted Lists:
-    # Merge k sorted linked lists and return it as one sorted list.
 
     # LRU Cache with Linked List:
     # Implement an LRU (Least Recently Used) cache using a linked list.
@@ -43,11 +28,7 @@
     # Sort a Linked List Using Insertion Sort:
     # Sort a linked list using the insertion sort algorithm.
 
-    # Add Two Large Numbers as Linked Lists:
-    # Given two numbers represented by linked lists where each node contains a single digit, add the two numbers, which can be very large.
-
-    # Remove Nth Node from End:
-    # Remove the Nth node from the end of a linked list.
+   
 
 class Node:
     def __init__(self,data,next=None):
