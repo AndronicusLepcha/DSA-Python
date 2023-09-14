@@ -12,6 +12,7 @@ The repository is organized into different categories, each containing implement
 - [Sorting Algorithms](sorting/): Implementation of various sorting algorithms like bubble sort, insertion sort, merge sort, quicksort, and more.
 - [Searching Algorithms](searching/): Implementation of binary search, linear search, and related techniques.
 - [Recursion](recursion/): Examples of solving problems using recursive techniques.
+- [Link](recursion/):https://www.youtube.com/watch?v=M2uO2nMT0Bk&t=9s
 - ...
 
 Feel free to explore the directories to find the specific data structures and algorithms you're interested in.
