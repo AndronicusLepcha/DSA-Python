@@ -1,3 +1,8 @@
+#1.Find MAx
+#2.Find Min
+#3.Calculate Sum
+#4.post_order_traversal
+#5.pre_order_traversal
 class BST:
     def __init__(self,data):
         self.data=data
@@ -18,7 +23,7 @@ class BST:
                 self.left.addChild(data)
             else:
                 self.left=BST(data)
-
+    #inorder traversal [lRr]
     def inorderTraversal(self):
         elements=[]
 
@@ -32,6 +37,7 @@ class BST:
         
         return elements
     
+    #searching key
     def search(self,key):
         if key==self.data:
             print("Key is found")
