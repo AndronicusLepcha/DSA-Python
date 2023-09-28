@@ -9,7 +9,7 @@ class fixed_array{
         arr[0]=90;
         arr[1]=99;
         arr[2]=999;
-        System.out.println()
+        System.out.println();
 
     }
 }
