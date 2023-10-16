@@ -36,6 +36,15 @@ class Tree:
         height=max(left,right)
         return height+1
 
+    def removeRRcase(self,node):
+        print("The node from which the rr case should be solved is "+str(node.data))
+        x=node
+        y=x.right
+        z=y.right
+
+        self.right=y
+        y.left=x
+
     def isBalanced(self,node):
         if node is None:
             return 0
@@ -45,11 +54,12 @@ class Tree:
         print("Hegiht of right tree "+str(right))
 
         if left-right < 1 or right-left < 1:
-            return False
-
+            #print("Need to remove")
+            self.removeRRcase(node.right);
+        
         return left+right
-
-
+    
+ 
 class RRcase:
     node=[1,0,3,4,5]
     root=Tree(node[0]);
@@ -58,6 +68,6 @@ class RRcase:
         root.addNode(node[x])
         
     root.display(root)
-    print(root.treeHegiht(root))
-    print(root.isBalanced(root))
+    print("Height of the tree is "+str(root.treeHegiht(root)))
+    root.isBalanced(root)
 
